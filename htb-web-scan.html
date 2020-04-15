@@ -5,7 +5,7 @@ xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <meta name=ProgId content=Word.Document>
 <meta name=Generator content="Microsoft Word 15">
 <meta name=Originator content="Microsoft Word 15">
@@ -22,16 +22,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Nikita Ponomarev</o:Author>
   <o:LastAuthor>Nikita Ponomarev</o:LastAuthor>
-  <o:Revision>17</o:Revision>
-  <o:TotalTime>284</o:TotalTime>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>285</o:TotalTime>
   <o:Created>2020-04-12T15:22:00Z</o:Created>
-  <o:LastSaved>2020-04-15T12:09:00Z</o:LastSaved>
-  <o:Pages>3</o:Pages>
-  <o:Words>376</o:Words>
-  <o:Characters>2144</o:Characters>
-  <o:Lines>17</o:Lines>
+  <o:LastSaved>2020-04-15T15:57:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>391</o:Words>
+  <o:Characters>2234</o:Characters>
+  <o:Lines>18</o:Lines>
   <o:Paragraphs>5</o:Paragraphs>
-  <o:CharactersWithSpaces>2515</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>2620</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -42,8 +42,8 @@ w\:* {behavior:url(#default#VML);}
 <link rel=colorSchemeMapping href="htb-web-scan_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:View>Print</w:View>
-  <w:Zoom>110</w:Zoom>
+  <w:Zoom>98</w:Zoom>
+  <w:GrammarState>Clean</w:GrammarState>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -66,7 +66,6 @@ w\:* {behavior:url(#default#VML);}
    <w:DontFlipMirrorIndents/>
    <w:OverrideTableStyleHps/>
   </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
   <m:mathPr>
    <m:mathFont m:val="Cambria Math"/>
    <m:brkBin m:val="before"/>
@@ -725,6 +724,9 @@ p.msonormal0, li.msonormal0, div.msonormal0
 	font-family:"Times New Roman",serif;
 	mso-fareast-font-family:"Times New Roman";
 	mso-fareast-theme-font:minor-fareast;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -788,13 +790,14 @@ div.WordSection1
 <div class=WordSection1>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='mso-ansi-language:EN-US'><a href="index.html">Main page</a><o:p></o:p></span></p>
+style='mso-ansi-language:EN-US'><a
+href="../../../../../../AppData/Roaming/Microsoft/Word/index.html">Main page</a><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:18.0pt;line-height:105%;mso-ansi-language:EN-US'>Scanning the
 HackTheBox Network<br>
 </span><span lang=EN-US style='mso-ansi-language:EN-US'>The purpose of this
-report is to show my (Nikita Ponomarev’s) findings and results during my scan
+report is to show my (Nikita Ponomarev's) findings and results during my scan
 of the HackTheBox (htb) network<br>
 during the Penetration Testing course taught by Tero Karvinen on Spring 2020.<br>
 This report is going to use only of the IP addresses scanned for clarity and
@@ -805,8 +808,8 @@ style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-lan
 EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='mso-ansi-language:EN-US'>I started the scan with an nmap “stealth scan”
-of the whole htb network with a default text file output:<o:p></o:p></span></p>
+style='mso-ansi-language:EN-US'>I started the scan with <span class=GramE>an</span>
+nmap stealth scan of the whole htb network with a default text file output:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
@@ -853,7 +856,7 @@ style='mso-ansi-language:EN-US'>With this quick scan we can already determine,
 that the server is most running a website (port 80), that it is a windows
 machine <br>
 (due to running Microsoft Windows RPC on port 135) and that the machine might
-have services running on higher ports that didn’t get detected, because<br>
+have services running on higher ports that didnt get detected, because<br>
 msrpc is used to negotiate communication over ports between 1025-65535. One of
 these ports is 3306, which is running mysql. UPDATE: This is in fact incorrect,
 mysql has nothing to do with msrpc.<br>
@@ -894,7 +897,7 @@ style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-lan
 EN-US'>This scan gives us confirmation that the machine is a Windows Server,
 since it is running Microsoft Internet Information Services (IIS).<br>
 We can also see details like the version of Microsoft IIS and the title of the
-website: “Fidelity”<br>
+website: &quot;Fidelity&quot;<br>
 Another interesting addition is we see some more information about the database
 running on port 3306.<br>
 We can see that MariaDB is most probably not accepting connections from other
@@ -916,20 +919,20 @@ of the example host looking like this:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_6" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:665.25pt;
+ id="Picture_x0020_6" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:666pt;
  height:303pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="htb-web-scan_files/image005.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=887 height=404
+</v:shape><![endif]--><![if !vml]><img border=0 width=888 height=404
 src="htb-web-scan_files/image005.png" v:shapes="Picture_x0020_6"><![endif]></span><span
 lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
 mso-ansi-language:EN-US'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'><span
-style='mso-tab-count:1'>                </span>From this, we can see some additional
-information, like which version of PHP is running on the website and the
-content length of the website being 3145,<br>
-<span style='mso-tab-count:1'>                </span>means that there is more
+style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>From this, we can see some
+additional information, like which version of PHP is running on the website and
+the content length of the website being 3145,<br>
+<span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>means that there is more
 to the website than this black image.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
@@ -938,8 +941,9 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'><span
-style='mso-tab-count:1'>                </span>This concludes my report on the
-HackTheBox network. You can return to the main page <a href="index.html">here</a>.<o:p></o:p></span></p>
+style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span>This concludes my report on the
+HackTheBox network. You can return to the main page <a
+href="../../../../../../AppData/Roaming/Microsoft/Word/index.html">here</a>.<o:p></o:p></span></p>
 
 </div>
 

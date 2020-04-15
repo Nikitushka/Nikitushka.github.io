@@ -22,16 +22,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Ponomarev Nikita</o:Author>
   <o:LastAuthor>Nikita Ponomarev</o:LastAuthor>
-  <o:Revision>139</o:Revision>
-  <o:TotalTime>4319</o:TotalTime>
+  <o:Revision>142</o:Revision>
+  <o:TotalTime>4320</o:TotalTime>
   <o:Created>2020-04-02T14:06:00Z</o:Created>
-  <o:LastSaved>2020-04-12T16:40:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>3969</o:Words>
-  <o:Characters>22627</o:Characters>
+  <o:LastSaved>2020-04-15T12:08:00Z</o:LastSaved>
+  <o:Pages>23</o:Pages>
+  <o:Words>3975</o:Words>
+  <o:Characters>22658</o:Characters>
   <o:Lines>188</o:Lines>
   <o:Paragraphs>53</o:Paragraphs>
-  <o:CharactersWithSpaces>26543</o:CharactersWithSpaces>
+  <o:CharactersWithSpaces>26580</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -44,7 +44,8 @@ target="h1_Ponomarev_files/props036.xml">
 <link rel=colorSchemeMapping href="h1_Ponomarev_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:GrammarState>Clean</w:GrammarState>
+  <w:View>Print</w:View>
+  <w:Zoom>110</w:Zoom>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -684,7 +685,7 @@ target="h1_Ponomarev_files/props036.xml">
 	mso-font-charset:0;
 	mso-generic-font-family:swiss;
 	mso-font-pitch:variable;
-	mso-font-signature:-536859905 1073786111 1 0 511 0;}
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
 @font-face
 	{font-family:"Cascadia Code";
 	panose-1:2 11 6 9 2 0 0 2 0 4;
@@ -715,7 +716,8 @@ target="h1_Ponomarev_files/props036.xml">
 	mso-bidi-theme-font:minor-bidi;
 	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	color:#0563C1;
 	mso-themecolor:hyperlink;
 	text-decoration:underline;
@@ -832,9 +834,6 @@ p.msonormal0, li.msonormal0, div.msonormal0
 	font-family:"Times New Roman",serif;
 	mso-fareast-font-family:"Times New Roman";
 	mso-fareast-theme-font:minor-fareast;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -1091,9 +1090,9 @@ style='mso-ansi-language:EN-US'><a href="index.html">Main page</a><o:p></o:p></s
 style='font-size:20.0pt;line-height:105%;mso-ansi-language:EN-US'>Webgoat<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='mso-ansi-language:EN-US'>This report is aimed to document my progression
-through all of the WebGoat 8’s sections (with Injection being only restricted
-to the intro)<br>
+style='mso-ansi-language:EN-US'>This report was written by Nikita Ponomarev and
+is aimed to document my progression through all of the WebGoat 8’s sections
+(with Injection being only restricted to the intro)<br>
 regarding the OWASP top 10 for a course held by Tero Karvinen during Spring of
 2020.<br>
 <br>
@@ -1225,17 +1224,17 @@ users<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-ansi-language:EN-US'>The severity of an SQL injection is defined to
-be dependent on the DBMS used and limited by the attacker’s skill and
-imagination, <br>
+be dependent on the DBMS used and limited by the attacker’s skill and imagination,
+<br>
 defense in depth countermeasures (like input validation and least privilege –
 approach) and database technology.<br>
 </span><span lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:
 minor-latin;mso-ansi-language:EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='mso-ansi-language:EN-US'>After the theory the subchapter <span
-class=GramE>comes to a close</span> with five exercises. <b>The first</b> being
-to retrieve all users from the users table:<o:p></o:p></span></p>
+style='mso-ansi-language:EN-US'>After the theory the subchapter comes to a
+close with five exercises. <b>The first</b> being to retrieve all users from
+the users table:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-ansi-language:EN-US'>ORIGINAL QUERY:<br>
@@ -1376,8 +1375,8 @@ EN-US'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>The solution here is <span class=GramE>exactly the same</span> as in the
-first injection exercise, except that there were two input fields this time. <br>
+EN-US'>The solution here is exactly the same as in the first injection
+exercise, except that there were two input fields this time. <br>
 <b>NOTE</b>: Setting the value of last_name to ‘Smith’ is not mandatory.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
@@ -1445,9 +1444,9 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><b><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>The fifth</span></b><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> and last exercise in the
-intro section to SQL injection demonstrates the compromise to availability with
-the task <br>
+mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> and last exercise in
+the intro section to SQL injection demonstrates the compromise to availability
+with the task <br>
 being to delete the access_log table containing the malicious queries the user
 has made.<br>
 This time though, the user does not have a query available to him (only the
@@ -1534,8 +1533,8 @@ EN-US'>The solution here ends the query prematurely, just like in the previous
 exercise and deletes the whole access_log table, <br>
 commenting out the rest of the code due to it causing a syntax error otherwise.
 <br>
-During my initial attempt at the query I had a lot of trouble with the last % wildcard,
-but another student reminded me <br>
+During my initial attempt at the query I had a lot of trouble with the last %
+wildcard, but another student reminded me <br>
 that it could just be commented out, which I totally forgot was possible for
 some reason. <br>
 <br>
@@ -1562,8 +1561,8 @@ EN-US'><o:p></o:p></span></p>
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>The Broken Authentication section is split into four sub-sections, the
 first being “Authentication Bypasses”.<br>
-Authentication Bypass <span class=GramE>is described as being</span> achieved
-by usually taking advantage of some flaw in the configuration or logic. <br>
+Authentication Bypass is described as being achieved by usually taking
+advantage of some flaw in the configuration or logic. <br>
 Tampering to achieve the right conditions. This can be done with hidden inputs,
 removing submission parameters and forced browsing <br>
 (which is just guessing/brute-forcing an area of the site).<o:p></o:p></span></p>
@@ -1611,7 +1610,7 @@ Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>Accept: */*<o:p
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:9.0pt;line-height:105%;font-family:"Cascadia Code";mso-bidi-font-family:
 Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>Accept-Language:
-en-<span class=GramE>US,en</span>;q=0.5<o:p></o:p></span></p>
+en-US,en;q=0.5<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:9.0pt;line-height:105%;font-family:"Cascadia Code";mso-bidi-font-family:
@@ -1734,8 +1733,8 @@ public/private key pair using RSA.<br>
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>A JWT token consists of a <span style='color:#FFC000'>header</span>, <span
 style='color:#4472C4;mso-themecolor:accent1'>claims</span> and <span
-style='color:#70AD47;mso-themecolor:accent6'>signature</span> encoded with base64,
-with the signature being added based on the algorithm.<br>
+style='color:#70AD47;mso-themecolor:accent6'>signature</span> encoded with
+base64, with the signature being added based on the algorithm.<br>
 The authorization using this token is described to work as follows: <br>
 “<i>The user logs in with a username and password. The server creates a new
 token and returns this one to the client. <br>
@@ -1786,7 +1785,7 @@ The output was the following:<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>{&quot;alg&quot;:&quot;HS512&quot;<span class=GramE>}.{</span>&quot;iat&quot;:1586884917,&quot;admin&quot;:&quot;false&quot;,&quot;user&quot;:&quot;Tom&quot;}<o:p></o:p></span></p>
+EN-US'>{&quot;alg&quot;:&quot;HS512&quot;}.{&quot;iat&quot;:1586884917,&quot;admin&quot;:&quot;false&quot;,&quot;user&quot;:&quot;Tom&quot;}<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -1794,10 +1793,11 @@ EN-US'>My first try consisted of editing <span style='background:lime;
 mso-highlight:lime'>“admin”:</span> to <span style='background:lime;mso-highlight:
 lime'>”true”</span>, but nothing happened.<br>
 After spending a lot of time trying to figure it out, I tried setting the “alg”
-to null and sending the whole token without the signature, and nothing happened.<br>
+to null and sending the whole token without the signature, and nothing
+happened.<br>
 I spent a lot of time wrapping my head around this thinking of what is wrong. I
-clicked on vote in one of the options and suddenly <span class=GramE>all of</span>
-the votes were set to 1 or 0.<br>
+clicked on vote in one of the options and suddenly all of the votes were set to
+1 or 0.<br>
 Yay! I thought, but what worked?<br>
 I tried using the last thing I tried first and refreshed the whole page and
 went back to the section. To my pleasant surprise all the votes <br>
@@ -1813,9 +1813,9 @@ style='mso-special-character:line-break'>
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>{&quot;alg&quot;: <span class=GramE><span style='background:lime;
-mso-highlight:lime'>null</span> }.{</span>&quot;iat&quot;:1586884917,&quot;admin&quot;:&quot;<span
-style='background:lime;mso-highlight:lime'>true</span>”,&quot;user&quot;:&quot;Tom&quot;}<o:p></o:p></span></p>
+EN-US'>{&quot;alg&quot;: <span style='background:lime;mso-highlight:lime'>null</span>
+}.{&quot;iat&quot;:1586884917,&quot;admin&quot;:&quot;<span style='background:
+lime;mso-highlight:lime'>true</span>”,&quot;user&quot;:&quot;Tom&quot;}<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -1893,8 +1893,8 @@ request<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>After refreshing the <span class=GramE>page</span> the numbers with the
-votes disappeared, confirming that I successfully reset the vote.<o:p></o:p></span></p>
+EN-US'>After refreshing the page the numbers with the votes disappeared,
+confirming that I successfully reset the vote.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -1913,7 +1913,7 @@ for the signature with the following simple command:<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;background:silver;
-mso-highlight:silver;mso-ansi-language:EN-US'>john <span class=GramE>jwt.john</span></span><span
+mso-highlight:silver;mso-ansi-language:EN-US'>john jwt.john</span><span
 lang=EN-US style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'><o:p></o:p></span></p>
@@ -1934,16 +1934,15 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>Before the last two tasks, we are greeted with more theory. This time about
-refreshing jwt tokens.<br>
+EN-US'>Before the last two tasks, we are greeted with more theory. This time
+about refreshing jwt tokens.<br>
 In summary, there are two types of tokens, access token and refresh token. In
 previous exercises we worked with access tokens.<br>
-They are used for making API calls towards the server and have a limited life
-span. A refresh token is sent to the server once an access token expires<br>
+They are used for making API calls towards the server and have a limited life span.
+A refresh token is sent to the server once an access token expires<br>
 and a request is made towards the server to get a new one. A refresh token can
 also expire, but their lifespan is much longer. This is how a user<br>
-can stay logged it without the need to log-in <span class=GramE>over and over
-again</span>.<br>
+can stay logged it without the need to log-in over and over again.<br>
 <br>
 -------------------------------------<o:p></o:p></span></p>
 
@@ -2026,8 +2025,8 @@ mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'><o:p></o:p></span></p>
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>This section focuses on the logical flaws in reset functionality
 provided by most applications that contain a login<br>
-screen and how to implement a secure functionality. <span class=GramE>Unfortunately</span>
-part of this subsection is done with WebWolf, <br>
+screen and how to implement a secure functionality. Unfortunately part of this
+subsection is done with WebWolf, <br>
 which I don’t have installed. Chances are, I will return to this section with
 WebWolf and complete it fully.<o:p></o:p></span></p>
 
@@ -2096,30 +2095,24 @@ auto;text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><span lang=EN-US
-style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>tom :</span></span><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> purple<o:p></o:p></span></p>
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>tom : purple<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
 auto;text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><span lang=EN-US
-style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>admin :</span></span><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> green<o:p></o:p></span></p>
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>admin : green<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpLast style='margin-left:72.0pt;mso-add-space:auto;
 text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><span lang=EN-US
-style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>larry :</span></span><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> yellow<o:p></o:p></span></p>
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>larry : yellow<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2130,10 +2123,8 @@ text-indent:-18.0pt;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
 Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=GramE><span lang=EN-US
-style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>jerry :</span></span><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> orange<o:p></o:p></span></p>
+</span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
+Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>jerry : orange<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2149,9 +2140,9 @@ answers.<o:p></o:p></span></p>
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_3"
  o:spid="_x0000_i1049" type="#_x0000_t75" alt="A screenshot of a cell phone&#10;&#10;Description automatically generated"
- style='width:442.5pt;height:351.75pt;visibility:visible;mso-wrap-style:square'>
+ style='width:441.75pt;height:351.75pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="h1_Ponomarev_files/image003.png" o:title="A screenshot of a cell phone&#10;&#10;Description automatically generated"/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=590 height=469
+</v:shape><![endif]--><![if !vml]><img border=0 width=589 height=469
 src="h1_Ponomarev_files/image003.png"
 alt="A screenshot of a cell phone&#10;&#10;Description automatically generated"
 v:shapes="Picture_x0020_3"><![endif]></span><span lang=EN-US style='mso-bidi-font-family:
@@ -2161,11 +2152,10 @@ Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'><o:p></o:p></sp
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>-------------------------------------<o:p></o:p></span></p>
 
-<p class=MsoNormal style='margin-left:36.0pt'><span class=GramE><span
-lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-mso-ansi-language:EN-US'>Unfortunately</span></span><span lang=EN-US
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'> the <b>last exercise</b> uses WebWolf, so it had to be skipped for now.<br>
+EN-US'>Unfortunately the <b>last exercise</b> uses WebWolf, so it had to be
+skipped for now.<br>
 <br>
 The last part of the theory discusses how to avoid password reset functionality
 abuse, like:<o:p></o:p></span></p>
@@ -2216,7 +2206,7 @@ Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span lang=EN-US style='mso-bidi-font-family:
 Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>Implement two
-factor <span class=GramE>authentication</span><o:p></o:p></span></p>
+factor authentication<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2280,18 +2270,18 @@ mso-ansi-language:EN-US'><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>I captured packets from docker0, since that is where I had WebGoat running.
-Normally a request like this would be sniffed from eth0 (or Ethernet)<br>
+EN-US'>I captured packets from docker0, since that is where I had WebGoat
+running. Normally a request like this would be sniffed from eth0 (or Ethernet)<br>
 <span style='mso-spacerun:yes'> </span>if the target is on a public domain.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>Once I start <span class=GramE>capturing</span> I click on “Log in”, and
-analyze packets sent and received through HTTP to and from </span><span
-lang=EN-US style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
-mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>start.mvc</span><span lang=EN-US style='mso-bidi-font-family:Calibri;
-mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>.<o:p></o:p></span></p>
+EN-US'>Once I start capturing I click on “Log in”, and analyze packets sent and
+received through HTTP to and from </span><span lang=EN-US style='font-size:
+10.0pt;line-height:105%;font-family:"Cascadia Code";mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>start.mvc</span><span
+lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
+mso-ansi-language:EN-US'>.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2331,10 +2321,10 @@ EN-US'>start.mvc</span><span lang=EN-US style='mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> we find a packet with
 the </span><span lang=EN-US style='font-size:10.0pt;line-height:105%;
 font-family:"Cascadia Code";mso-bidi-font-family:Calibri;mso-bidi-theme-font:
-minor-latin;background:silver;mso-highlight:silver;mso-ansi-language:EN-US'>Content-<span
-class=GramE>Type :</span> text/plain</span><span lang=EN-US style='mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>, this packet
-contains the credentials for a user named “CaptainJack” in cleartext:<o:p></o:p></span></p>
+minor-latin;background:silver;mso-highlight:silver;mso-ansi-language:EN-US'>Content-Type
+: text/plain</span><span lang=EN-US style='mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>, this packet contains
+the credentials for a user named “CaptainJack” in cleartext:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -2408,8 +2398,8 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>In the first theory part the XML entity is defined as something that
-allows tags to be defined in such a manner, <br>
+EN-US'>In the first theory part the XML entity is defined as something that allows
+tags to be defined in such a manner, <br>
 that they will be replaced by content when the XML document is parsed.<br>
 There are three types of entities in general:<o:p></o:p></span></p>
 
@@ -2440,11 +2430,9 @@ style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>Parameter
 entities<o:p></o:p></span></p>
 
-<p class=MsoNormal style='margin-left:36.0pt'><span class=GramE><span
-lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-mso-ansi-language:EN-US'>Basically</span></span><span lang=EN-US
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'> these entities are like variables in any programming language:<o:p></o:p></span></p>
+EN-US'>Basically these entities are like variables in any programming language:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -2459,8 +2447,8 @@ mso-ansi-language:EN-US'><o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>The theory also defines an XXE (XML External Entity Attack) injection.<br>
-This is a type of attack against an application that parses XML input. This
-attack occurs when XML input containing a <br>
+This is a type of attack against an application that parses XML input. This attack
+occurs when XML input containing a <br>
 reference to an external entity is processed by a weakly configured XML parser.
 This type of attack can lead to the disclosure of confidential data, <br>
 denial of service, server side request forgery, port scanning from the
@@ -2503,9 +2491,9 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><b><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>The first exercise</span></b><span lang=EN-US style='mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> has us to
-comment on a photo and make an XXE injection when submitting the form to list
-the root directory of the filesystem.<o:p></o:p></span></p>
+Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> has us to comment
+on a photo and make an XXE injection when submitting the form to list the root
+directory of the filesystem.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2520,11 +2508,9 @@ EN-US'>PROOF OF CONCEPT:<o:p></o:p></span></p>
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'>=-=-=-=-=-=-=-=-=-=<o:p></o:p></span></p>
 
-<p class=MsoNormal style='margin-left:36.0pt'><span class=GramE><span
-lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
-mso-ansi-language:EN-US'>First</span></span><span lang=EN-US style='mso-bidi-font-family:
-Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'> we look at what
-type of request is made upon posting a comment:<o:p></o:p></span></p>
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
+EN-US'>First we look at what type of request is made upon posting a comment:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -2547,10 +2533,10 @@ EN-US'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_10" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:608.25pt;
+ id="Picture_x0020_10" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:607.5pt;
  height:249pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="h1_Ponomarev_files/image010.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=811 height=332
+</v:shape><![endif]--><![if !vml]><img border=0 width=810 height=332
 src="h1_Ponomarev_files/image010.png" v:shapes="Picture_x0020_10"><![endif]></span><span
 lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
 mso-ansi-language:EN-US'><o:p></o:p></span></p>
@@ -2597,8 +2583,8 @@ style='mso-special-character:line-break'>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
-EN-US'>This exercise is <span class=GramE>exactly the same</span>, except </span><span
-lang=EN-US style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
+EN-US'>This exercise is exactly the same, except </span><span lang=EN-US
+style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;background:silver;
 mso-highlight:silver;mso-ansi-language:EN-US'>Content-Type</span><span
 lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
@@ -2624,10 +2610,10 @@ XXE, but unfortunately the exercise uses WebWolf:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="_x0000_i1040" type="#_x0000_t75" style='width:1058.25pt;height:499.5pt;
+ id="_x0000_i1040" type="#_x0000_t75" style='width:1058.25pt;height:498.75pt;
  visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="h1_Ponomarev_files/image012.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=1411 height=666
+</v:shape><![endif]--><![if !vml]><img border=0 width=1411 height=665
 src="h1_Ponomarev_files/image012.png" v:shapes="_x0000_i1040"><![endif]></span><span
 lang=EN-US style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
 mso-ansi-language:EN-US'><o:p></o:p></span></p>
@@ -2660,10 +2646,10 @@ explanation on Direct Object References and Insecure Direct Object references.<b
 The definition of Direct Object References by WebGoat is when an application
 uses input provided by the client to access data &amp; objects:<br>
 </span><span lang=en-FI style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Picture_x0020_13" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:420pt;
+ id="Picture_x0020_13" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:419.25pt;
  height:123.75pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="h1_Ponomarev_files/image013.png" o:title=""/>
-</v:shape><![endif]--><![if !vml]><img border=0 width=560 height=165
+</v:shape><![endif]--><![if !vml]><img border=0 width=559 height=165
 src="h1_Ponomarev_files/image013.png" v:shapes="Picture_x0020_13"><![endif]></span><span
 lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
 
@@ -2675,8 +2661,8 @@ or disclose private data that could be used to perform operations or access
 data that the user should not be able to perform or access.<br>
 An example of a Insecure Direct Object Reference would be that if we used the
 first URL in the example above and changed the id to<br>
-“12346”. If we <span class=GramE>are able to</span> see another object, then
-the Direct Object reference is insecure.<o:p></o:p></span></p>
+“12346”. If we are able to see another object, then the Direct Object reference
+is insecure.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
@@ -2856,9 +2842,9 @@ language of your choice)<o:p></o:p></span></p>
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;background:silver;
-mso-highlight:silver;mso-ansi-language:EN-US'>python -c &quot;for i in <span
-class=GramE>range(</span>2342380, 2342401): print(i)&quot; &gt; idlist.txt</span><span
-lang=EN-US style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
+mso-highlight:silver;mso-ansi-language:EN-US'>python -c &quot;for i in
+range(2342380, 2342401): print(i)&quot; &gt; idlist.txt</span><span lang=EN-US
+style='font-size:10.0pt;line-height:105%;font-family:"Cascadia Code";
 mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
 EN-US'><o:p></o:p></span></p>
 
@@ -3033,6 +3019,10 @@ EN-US'>-------------------------------------<o:p></o:p></span></p>
 style='font-size:12.0pt;line-height:105%;mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'>Missing Function Level
 Access Control<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-size:12.0pt;line-height:
+105%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></b></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
 style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-language:

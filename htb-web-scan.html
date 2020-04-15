@@ -22,16 +22,16 @@ w\:* {behavior:url(#default#VML);}
  <o:DocumentProperties>
   <o:Author>Nikita Ponomarev</o:Author>
   <o:LastAuthor>Nikita Ponomarev</o:LastAuthor>
-  <o:Revision>14</o:Revision>
+  <o:Revision>17</o:Revision>
   <o:TotalTime>284</o:TotalTime>
   <o:Created>2020-04-12T15:22:00Z</o:Created>
-  <o:LastSaved>2020-04-12T16:41:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>362</o:Words>
-  <o:Characters>2067</o:Characters>
+  <o:LastSaved>2020-04-15T12:09:00Z</o:LastSaved>
+  <o:Pages>3</o:Pages>
+  <o:Words>376</o:Words>
+  <o:Characters>2144</o:Characters>
   <o:Lines>17</o:Lines>
-  <o:Paragraphs>4</o:Paragraphs>
-  <o:CharactersWithSpaces>2425</o:CharactersWithSpaces>
+  <o:Paragraphs>5</o:Paragraphs>
+  <o:CharactersWithSpaces>2515</o:CharactersWithSpaces>
   <o:Version>16.00</o:Version>
  </o:DocumentProperties>
  <o:OfficeDocumentSettings>
@@ -42,8 +42,8 @@ w\:* {behavior:url(#default#VML);}
 <link rel=colorSchemeMapping href="htb-web-scan_files/colorschememapping.xml">
 <!--[if gte mso 9]><xml>
  <w:WordDocument>
-  <w:Zoom>98</w:Zoom>
-  <w:GrammarState>Clean</w:GrammarState>
+  <w:View>Print</w:View>
+  <w:Zoom>110</w:Zoom>
   <w:TrackMoves>false</w:TrackMoves>
   <w:TrackFormatting/>
   <w:PunctuationKerning/>
@@ -669,7 +669,7 @@ w\:* {behavior:url(#default#VML);}
 	mso-font-charset:0;
 	mso-generic-font-family:roman;
 	mso-font-pitch:variable;
-	mso-font-signature:3 0 0 0 1 0;}
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
 @font-face
 	{font-family:Calibri;
 	panose-1:2 15 5 2 2 2 4 3 2 4;
@@ -686,7 +686,7 @@ w\:* {behavior:url(#default#VML);}
 	margin-right:0cm;
 	margin-bottom:8.0pt;
 	margin-left:0cm;
-	line-height:106%;
+	line-height:105%;
 	mso-pagination:widow-orphan;
 	font-size:11.0pt;
 	font-family:"Calibri",sans-serif;
@@ -700,7 +700,8 @@ w\:* {behavior:url(#default#VML);}
 	mso-bidi-theme-font:minor-bidi;
 	mso-fareast-language:EN-US;}
 a:link, span.MsoHyperlink
-	{mso-style-priority:99;
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
 	color:#0563C1;
 	mso-themecolor:hyperlink;
 	text-decoration:underline;
@@ -724,9 +725,6 @@ p.msonormal0, li.msonormal0, div.msonormal0
 	font-family:"Times New Roman",serif;
 	mso-fareast-font-family:"Times New Roman";
 	mso-fareast-theme-font:minor-fareast;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
 .MsoChpDefault
 	{mso-style-type:export-only;
 	mso-default-props:yes;
@@ -793,11 +791,11 @@ div.WordSection1
 style='mso-ansi-language:EN-US'><a href="index.html">Main page</a><o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='font-size:18.0pt;line-height:106%;mso-ansi-language:EN-US'>Scanning the
+style='font-size:18.0pt;line-height:105%;mso-ansi-language:EN-US'>Scanning the
 HackTheBox Network<br>
 </span><span lang=EN-US style='mso-ansi-language:EN-US'>The purpose of this
-report is to show my findings and results during my scan of the HackTheBox
-(htb) network<br>
+report is to show my (Nikita Ponomarev’s) findings and results during my scan
+of the HackTheBox (htb) network<br>
 during the Penetration Testing course taught by Tero Karvinen on Spring 2020.<br>
 This report is going to use only of the IP addresses scanned for clarity and
 length of the report.<o:p></o:p></span></p>
@@ -807,8 +805,8 @@ style='mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;mso-ansi-lan
 EN-US'>-------------------------------------<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
-style='mso-ansi-language:EN-US'>I started the scan with <span class=GramE>an</span>
-nmap “stealth scan” of the whole htb network with a default text file output:<o:p></o:p></span></p>
+style='mso-ansi-language:EN-US'>I started the scan with an nmap “stealth scan”
+of the whole htb network with a default text file output:<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=en-FI
 style='mso-ansi-language:#0C00;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
@@ -857,7 +855,8 @@ machine <br>
 (due to running Microsoft Windows RPC on port 135) and that the machine might
 have services running on higher ports that didn’t get detected, because<br>
 msrpc is used to negotiate communication over ports between 1025-65535. One of
-these ports is 3306, which is running mysql.<br>
+these ports is 3306, which is running mysql. UPDATE: This is in fact incorrect,
+mysql has nothing to do with msrpc.<br>
 This is unusual, since a DBMS is not supposed to show during scans like this.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
@@ -927,9 +926,9 @@ mso-ansi-language:EN-US'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span lang=EN-US style='mso-bidi-font-family:Calibri;
 mso-bidi-theme-font:minor-latin;mso-ansi-language:EN-US'><span
-style='mso-tab-count:1'>                </span>From this, we can see some
-additional information, like which version of PHP is running on the website and
-the content length of the website being 3145,<br>
+style='mso-tab-count:1'>                </span>From this, we can see some additional
+information, like which version of PHP is running on the website and the
+content length of the website being 3145,<br>
 <span style='mso-tab-count:1'>                </span>means that there is more
 to the website than this black image.<o:p></o:p></span></p>
 

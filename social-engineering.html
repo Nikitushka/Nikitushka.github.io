@@ -1,0 +1,228 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:36.0pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=en-FI link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><a
+href="index.html">Main page</a></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Social Engineering Tactics by Riku Juurikko</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>The purpose of
+this report is to describe some of the social engineering tactics I found most
+useful,<br>
+that were described by Riku Juurikko, whom held a lecture for my Penetration
+Testing course <br>
+taught by <a
+href="http://terokarvinen.com/2020/tunkeutumistestaus-kurssi-pentest-course-ict4tn027-3003/">Tero
+Karvinen</a> during Spring of 2020.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;line-height:11.55pt'><span
+lang=EN-US style='color:black'>-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>On April 14<sup>th</sup>
+2020, we had a guest lecture held by Riku Juurikko, whom works at Elisa as a
+Senior Security<br>
+Manager, and has worked as a physical penetration tester in the past. <br>
+Mr. Juurikko, with examples from his real-life experiences explained to us,
+that just like computers,<br>
+people can be hacked too.<br>
+This art is called Social Engineering.<br>
+<br>
+<a href="https://www.investopedia.com/terms/s/social-engineering.asp">Investopedia</a>
+defines Social Engineering as:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US>&quot;[The]
+act of exploiting human weaknesses to gain access to personal information and
+protected systems.<br>
+Social engineering relies on manipulating individuals rather than hacking
+computer systems to penetrate<br>
+a target's account.&quot;<br>
+<br>
+</span></i><span lang=EN-US>During his presentation, Mr. Juurikko told us about
+the six key principles of social engineering:</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Reciprocity – The human tendency to return a
+favor</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Commitment and consistency – People tend to
+stick with whatever their choice</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Social proof – People will do things that they
+see others are doing (we all technically lied to our parent<br>
+or teacher when answering the question &quot;Would you jump off a bridge if
+everyone else did?&quot;)</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Authority – The tendency to obey authority</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Liking – People are more easily persuaded by
+people they like. Attractiveness is a key aspect of this.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:54.0pt;text-indent:-18.0pt'><span
+lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Scarcity – The basic principle of supply and
+demand. If there's a limited amount of something, the demand rises.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US> Out of all of
+them, two key principles stick out for me: &quot;Reciprocity” and &quot;Social proof&quot;:<br>
+<br>
+<b>Reciprocity</b>, the tendency to return a favor is concept that also exists
+in <a
+href="https://www.khanacademy.org/science/physics/work-and-energy/work-and-energy-tutorial/a/what-is-conservation-of-energy">physics</a>,
+<a href="https://www.urbandictionary.com/define.php?term=equivalent%20exchange">pop-culture</a>
+and <a
+href="https://www.phrasemix.com/phrases/you-have-to-spend-money-to-make-money">business</a>.<br>
+This is a philosophy that applies day-to-day life, and a concept we do not
+normally think about.<br>
+But nevertheless, people tend to give back when given something because we
+stand <a
+href="https://www.psychologytoday.com/us/blog/evidence-based-living/201706/what-we-know-about-gratitude-and-giving-back">to
+gain something from it.</a><br>
+It doesn't matter if it's the good feeling of getting rid of some sort of mental
+debt, or just trying to get more out of the<br>
+exchanges that happen, a social engineer is just trying to exploit this human
+behavior. <br>
+An excellent example of this is what Mr. Juurikko told us, when holding open a
+door for a person, that person will likely<br>
+hold the next one open for you, which can get an attacker to a place one would
+not have access to otherwise.<br>
+Another example would be <a href="https://en.wikipedia.org/wiki/Sexpionage">sexpionage</a>
+(which for the record I am not encouraging), where the target is given sex,<br>
+along with a sense of intimacy and security that comes with it. As a result,
+the target might speak more openly to the spy,<br>
+revealing crucial information or simply giving the person an access to an
+&quot;off-limits&quot; area, like their apartment as a result.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b><span lang=EN-US>Social proof</span></b><span
+lang=EN-US>, on the other hand is another highly exploitable key principle of
+social engineering for me.<br>
+I consider it one due to the <a
+href="https://www.psychologynoteshq.com/social-proof/">Social Proof Theory</a>
+by Robert Caldini and combined with poor training in an organization,<br>
+could lead to catastrophic consequences. If person A is unsure of something,
+they will look unto others in order to find<br>
+a solution. This phenomenon can be seen in simple things, like fashion, or in
+darker things: like <a
+href="https://people.howstuffworks.com/5-copycat-killers.htm">copycat serial
+killers</a> or <a href="https://psychology.wikia.org/wiki/Copycat_suicide">suicides</a>.<br>
+This makes unsure individuals, like people who need constant validation in
+their actions, zealous followers of trends – and<br>
+other countless similar personalities the most vulnerable to this aspect of
+social engineering. Where a fake Wikipedia article or <br>
+website could serve as proof of an attacker being someone else, or to steer to
+victim to some otherwise unwanted action.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;line-height:11.55pt'><span
+lang=EN-US><br>
+</span><span lang=EN-US style='color:black'>-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;line-height:11.55pt'><span
+lang=EN-US style='color:black'>This concludes my report about the social
+engineering presentation by Riku Juurikko. <br>
+I enjoyed writing about this topic, due to my interest in psychology and human
+behavior and learned a lot during my research<br>
+process.<br>
+<br>
+<a href="index.html">Return to Main Page</a><br>
+<br>
+</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

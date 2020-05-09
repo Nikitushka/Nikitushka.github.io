@@ -1,0 +1,300 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=en-FI link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><a
+href="index.html">Main Page</a></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Mirai Botnet</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>The purpose of
+this report is to introduce the reader to the Mirai malware, analyze its <a
+href="https://github.com/jgamblin/Mirai-Source-Code">source-code</a><br>
+and find out how it attacked IoT devices, along with taking a look at Mirai
+copycats that used similar attacks.<br>
+This report was written for the Penetration Testing Course taught by <a
+href="http://terokarvinen.com/2020/tunkeutumistestaus-kurssi-pentest-course-ict4tn027-3003/">Tero
+Karvinen</a>.<br>
+</span><span lang=EN-US style='color:black'><br>
+-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Mirai Nikki – Future Diary</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><img border=0 width=638
+height=359 id="Picture 1" src="Mirai%20Botnet_files/image001.jpg"></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>The origins of
+Mirai start out relatively humbly – as far as illegal activity goes.<br>
+<br>
+<a href="https://www.minecraft.net/">Minecraft</a> is one of videogame-industry's
+titans, made by one man over 10 years ago, the game continues <br>
+to be one of the <a
+href="https://www.businessinsider.com.au/minecraft-monthly-player-number-microsoft-2019-9">most
+popular to this day</a>. And Minecraft has multiplayer capabilities, <a
+href="https://apexminecrafthosting.com/how-to-make-money-on-your-minecraft-server/">with
+servers being able to<br>
+make over 100.000$ A MONTH</a>. That's a lot of money, and in order to succeed,
+servers have to compete.<br>
+But how do you force a bunch of people to join your server instead of their
+usual, much more popular server?<br>
+It's relatively simple, deny their access to it. And is there honestly a better
+way, than to DDoS said server and have<br>
+the player base join other servers due to not being able to play on their
+favorite server? Especially with <a
+href="https://www.imperva.com/learn/application-security/booters-stressers-ddosers/">DDoS-for-hire</a>,
+<br>
+this is simple and earns the creators some decent money, just by granting
+access to their botnet for a fee.<br>
+On the other side, there are companies that protect servers from these kind of
+attacks, for a fee.<br>
+<br>
+One of these companies was called ProTraf Solutions, run by one Paras Jha, <a
+href="https://krebsonsecurity.com/2017/01/who-is-anna-senpai-the-mirai-worm-author/">believed
+to be &quot;Anna-Senpai&quot;.</a><br>
+But he put a little twist to it, instead of just protecting companies from DDoS
+attacks, he used a botnet to stage an attack <br>
+on servers and offered the victim help through his company. <br>
+Anna-Senpai would pretend to provide DDoS mitigation services and protect servers
+from DDoS attacks in reality<br>
+orchestrated by him. But with great power comes great responsibility, in the
+end, he got himself caught<br>
+despite his efforts to hide his tracks, due to him using his botnet to DDoS for
+more malicious purposes, like taking down <br>
+a rival Minecraft server DDoS protection company <a
+href="https://www.proxypipe.com/">ProxyPipe Inc.</a> and <a
+href="https://krebsonsecurity.com/">krebsonsecurity.com</a> with a historical
+620 Gbps<br>
+DDoS attack. In order not to be caught as easily, Anna-Senpai, published the
+source-code for Mirai:<br>
+<br>
+<img border=0 width=751 height=301 id="Picture 2"
+src="Mirai%20Botnet_files/image002.png"
+alt="A screenshot of a cell phone&#10;&#10;Description automatically generated"> <br>
+<i>Image source: <a
+href="https://krebsonsecurity.com/wp-content/uploads/2016/10/mirai-hf.png">krebsonsecurity.com</a></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>This would in
+theory would have helped muddy the waters, due to countless copycats spawning
+from this.<br>
+The source code also contained strings in Russian in order to create a picture,
+that the malware was written by Russian hackers<br>
+even though the clients language is in English.<br>
+<br>
+The name of the malware comes from an anime series called Mirai Nikki,
+according to Anna-Senpai in his chat with Robert Coelho<br>
+vice president of ProxyPipe Inc.<br>
+<br>
+</span><span lang=EN-US style='color:black'>-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%;color:black'>How it works – Let's look
+at the Source-Code</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='color:black'>The malware is written in two programming languages, C for
+the bots in order to scan for other vulnerable machines and conduct attacks<br>
+and Go, for the command and control center (CnC). <br>
+Mirai scans the internet for IoT devices in order to grow the botnet and then
+launches DDoS attacks based on the instructions given by their<br>
+CnC. Once a device is infected it's run in the memory and deleted from disk and
+will remain active until the device is rebooted, unfortunately<br>
+it doesn't take long for the machine to be reinfected.<br>
+<br>
+In order to find these new victims, the virus continuously scans on telnet
+protocol ports 23 and 2323 with a list of default credentials:<br>
+<img border=0 width=847 height=894 id="Picture 6"
+src="Mirai%20Botnet_files/image003.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"><br>
+</span><i><span lang=EN-US><img border=0 width=814 height=862 id="Picture 3"
+src="Mirai%20Botnet_files/image004.png"
+alt="A screenshot of text&#10;&#10;Description automatically generated"></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US><img
+border=0 width=741 height=280 id="Picture 5"
+src="Mirai%20Botnet_files/image005.png"
+alt="A screenshot of text&#10;&#10;Description automatically generated"></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US>Source: <a
+href="https://github.com/jgamblin/Mirai-Source-Code/blob/master/mirai/bot/scanner.c">github.com</a><br>
+<br>
+</span></i><span lang=EN-US>One interesting piece of the scanner code is this
+hardcoded <a href="https://beginnersbook.com/2014/01/c-dowhile-loop/">do-while</a>
+loop that makes sure Mirai avoids specific IP-addresses:<br>
+<img border=0 width=747 height=500 id="Picture 7"
+src="Mirai%20Botnet_files/image006.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>Mirai also makes
+sure that no other botnets take over by killing telnet, ssh and http on the
+device:<br>
+<img border=0 width=605 height=532 id="Picture 8"
+src="Mirai%20Botnet_files/image007.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><img border=0
+width=617 height=385 id="Picture 9" src="Mirai%20Botnet_files/image008.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><img border=0
+width=614 height=386 id="Picture 10" src="Mirai%20Botnet_files/image009.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US>Source: <a
+href="https://github.com/jgamblin/Mirai-Source-Code/blob/master/mirai/bot/killer.c">github.com</a></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>The malware also
+looks for a malware called <a href="https://evosec.eu/new-iot-malware/">Anime/Kami</a>
+and kills it if found:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US><img
+border=0 width=639 height=310 id="Picture 11"
+src="Mirai%20Botnet_files/image010.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>And by scanning
+for other malware processes and killing them, it implements a defense
+mechanism:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><img border=0
+width=352 height=93 id="Picture 12" src="Mirai%20Botnet_files/image011.png"
+alt="A picture containing laptop, room, bird&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>Some examples containing
+Russian strings:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><img border=0 width=173
+height=27 id="Picture 13" src="Mirai%20Botnet_files/image012.png"><span
+lang=EN-US><br>
+(I love chicken nuggets)</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><img border=0
+width=618 height=187 id="Picture 17" src="Mirai%20Botnet_files/image013.png"
+alt="A picture containing bird&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>                (An unexpected error occurred\r\n<br>
+                press any key to continue.)</span></p>
+
+<p class=MsoNormal><span lang=EN-US>                <img border=0 width=499
+height=324 id="Picture 18" src="Mirai%20Botnet_files/image014.png"
+alt="A screenshot of a cell phone&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>                (Username &amp; password
+respectively)<br>
+                <i>Source: <a
+href="https://github.com/jgamblin/Mirai-Source-Code/blob/master/mirai/cnc/admin.go">github.com</a><br>
+</i>                These were honestly pretty funny, since after these strings,
+the rest of the admin panel is in English.</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>Different User-Agents
+the bots imitate in their DDoS attacks:</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US><img border=0
+width=961 height=144 id="Picture 15" src="Mirai%20Botnet_files/image015.png"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US>Source: <a
+href="https://github.com/jgamblin/Mirai-Source-Code/blob/master/mirai/bot/table.h">github.com</a></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>HTTP attack
+workflow:<br>
+<img border=0 width=813 height=251 id="Picture 16"
+src="Mirai%20Botnet_files/image016.png"
+alt="A screenshot of a social media post&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><i><span lang=EN-US>Source: <a
+href="https://github.com/jgamblin/Mirai-Source-Code/blob/master/mirai/bot/attack.h">github.com</a></span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>In order to work
+with the source code I have read these articles: <a
+href="https://www.imperva.com/blog/malware-analysis-mirai-ddos-botnet/">imperva.com</a>
+&amp; <a
+href="https://www.csoonline.com/article/3258748/the-mirai-botnet-explained-how-teen-scammers-and-cctv-cameras-almost-brought-down-the-internet.html">csoonline.com</a></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='color:black'>-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='font-size:16.0pt;line-height:107%'>Mirai Legacy</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>Due to Anna-Senpai's
+opening of the source code, many copycat's and variations of Mirai have been
+seen around the net,<br>
+one of the most notorious ones being the 2016 attack on DNS provider Dyn, apparently,
+due to Ecuadorian embassy's<br>
+decision to rescind the Internet access of the founder of Wikileaks, Julian Assange.
+The attack resulted in over 70 services<br>
+being affected, with Anonymous (The Guy Fawkes one) and New World Hackers
+claiming responsibility.<br>
+<i>Source: <a href="https://en.wikipedia.org/wiki/2016_Dyn_cyberattack">Wikipedia</a></i></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US
+style='color:black'>-------------------------------------</span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><span lang=EN-US>This concludes
+my report, I hope you enjoyed reading it. This was an insightful entry into the
+world of botnets<br>
+for me after writing the <a href="ddckc.html">Cyber Killchain for Carna botnet</a>
+(that I should really fill up more), and showed me<br>
+that although these projects are pretty big; in the end they’re not even that
+hard to carry out due to negligence by<br>
+IoT device manufacturers.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>                <a href="index.html">Return
+to Main Page</a></span></p>
+
+</div>
+
+</body>
+
+</html>
